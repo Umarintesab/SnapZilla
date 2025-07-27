@@ -89,12 +89,6 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
-.hamburger {
-    display: none;
-    font-size: 30px;
-    color: #fff;
-    cursor: pointer;
-}
 
 /* Hero Section */
 .hero {
@@ -336,16 +330,6 @@ nav {
     width: 100%;
 }
 
-/* Hamburger Menu */
-.hamburger {
-    display: none;
-    font-size: 32px;
-    color: #fff;
-    cursor: pointer;
-}
-.hamburger {
-  margin-left: auto; /* Pushes hamburger to the far right */
-}
 
 /* Mobile Menu */
 @media (max-width: 768px) {
@@ -467,14 +451,6 @@ nav ul {
     display: flex;
     gap: 20px;
     transition: 0.3s;
-}
-
-/* Hamburger button hidden on desktop */
-.hamburger {
-    display: none;
-    font-size: 28px;
-    color: #fff;
-    cursor: pointer;
 }
 
 /* Mobile styles */
