@@ -1,0 +1,544 @@
+/* ===== Polaroid Funky + Clean Style (Enhanced) ===== */
+:root {
+    --bg-color: #faf3e0;
+    /* Off-white paper background */
+    --accent-color: #ff6f61;
+    /* Coral Pink */
+    --secondary-color: #0c5d61;
+    /* Teal */
+    --highlight-color: #f1f148;
+    /* Retro Yellow */
+    --logo-glow-color1: #8a2b22;
+    /* First glow */
+    --logo-glow-color2: #dbdb24cb;
+    /* Second glow */
+
+    --text-color: #333333;
+    --white: #ffffff;
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--secondary-color), #2a7d7f);
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-bottom: 4px solid var(--highlight-color);
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    padding: 6px 0;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: var(--highlight-color);
+    bottom: -6px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    height: 130vh;
+    background: linear-gradient(rgba(250, 243, 224, 0.9), rgba(250, 243, 224, 0.9)), url('hero.png') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+}
+
+.hero h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 68px;
+    color: var(--accent-color);
+    margin-bottom: 10px;
+    animation: fadeDown 1s ease-out forwards;
+}
+
+.hero p {
+    font-size: 22px;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    animation: fadeDown 1s ease-out forwards;
+    animation-delay: 0.4s;
+}
+
+.btn {
+    background: var(--highlight-color);
+    color: #333;
+    padding: 14px 36px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 4px 4px 0 #333;
+    animation: fadeDown 1s ease-out forwards;
+    animation-delay: 0.8s;
+}
+
+.btn:hover {
+    transform: translate(-4px, -4px) scale(1.05);
+    box-shadow: 8px 8px 0 var(--accent-color);
+}
+
+/* Sections */
+section {
+    padding: 100px 50px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+    font-family: 'Pacifico', cursive;
+}
+
+/* About Section */
+#about img {
+    width: 250px;
+    border-radius: 50%;
+    border: 6px solid var(--white);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+/* Portfolio - Polaroid Style */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.polaroid {
+    background: var(--white);
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.polaroid img {
+    width: 100%;
+    border-radius: 4px;
+    display: block;
+}
+
+.polaroid p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.polaroid:hover {
+    transform: rotate(-2deg) scale(1.07);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+}
+
+/* Services */
+#services ul {
+    list-style: none;
+    padding: 0;
+}
+
+#services li {
+    font-size: 20px;
+    margin: 14px 0;
+    color: var(--text-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#services li:hover {
+    color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+/* Footer (WhatsApp Only) */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+.whatsapp-links a img {
+    width: 40px;
+    /* Previously 24px */
+    height: 40px;
+    /* Previously 24px */
+}
+
+.whatsapp-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.whatsapp-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #25d366;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 40px;
+    font-weight: lighter;
+    text-decoration: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.whatsapp-links a:hover {
+    background: #1ebc59;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Navbar */
+header {
+    background: linear-gradient(135deg, var(--secondary-color), #2a7d7f);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-bottom: 4px solid var(--highlight-color);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    padding: 6px 0;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: var(--highlight-color);
+    bottom: -6px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 32px;
+    color: #fff;
+    cursor: pointer;
+}
+.hamburger {
+  margin-left: auto; /* Pushes hamburger to the far right */
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background: var(--secondary-color);
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        gap: 30px;
+        padding-top: 50px;
+        transition: 0.4s ease-in-out;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: block;
+        /* ✅ Visible on mobile */
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    /* Reduced from 40px 20px */
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+footer h2 {
+    font-size: 26px;
+    /* Reduced from 28px */
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.whatsapp-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    /* Reduced from 20px */
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.whatsapp-links a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    /* Reduced from 10px */
+    background: #25d366;
+    color: #fff;
+    padding: 8px 14px;
+    /* Smaller buttons */
+    border-radius: 30px;
+    font-size: 14px;
+    /* Reduced from 16px */
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-links a img {
+    width: 38px;
+    /* Even smaller icon */
+    height: 38px;
+}
+
+.whatsapp-links a:hover {
+    background: #1ebc59;
+    transform: scale(1.05);
+}
+
+footer p {
+    font-size: 18px;
+    /* Smaller text */
+    opacity: 10;
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 8px var(--highlight-color), 0 0 12px var(--accent-color);
+    animation: glowPulse 2s infinite alternate;
+    cursor: pointer;
+    /* Show it's clickable */
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    text-shadow: 0 0 16px var(--highlight-color), 0 0 28px var(--accent-color);
+    transform: scale(1.05);
+}
+
+/* Glow Pulse Animation */
+@keyframes glowPulse {
+    0% {
+        text-shadow: 0 0 8px var(--highlight-color), 0 0 12px var(--accent-color);
+    }
+
+    100% {
+        text-shadow: 0 0 16px var(--highlight-color), 0 0 24px var(--accent-color);
+    }
+}
+
+/* Hide hamburger on desktop */
+/* Default nav for desktop */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    transition: 0.3s;
+}
+
+/* Hamburger button hidden on desktop */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    nav ul {
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        background: var(--secondary-color);
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+        border-radius: 10px;
+        display: none;
+        z-index: 1000;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+header {
+    background: var(--secondary-color);
+    color: #a01d1d;
+    display: flex;
+    justify-content: space-between;
+    /* Makes logo left & hamburger/nav right */
+    align-items: center;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    text-decoration: none;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Pacifico', cursive;
+  font-size: 32px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 8px var(--highlight-color), 0 0 12px var(--accent-color);
+  animation: glowPulse 2s infinite alternate;
+  text-decoration: none; /* Remove underline */
+}
+
+.logo img {
+  width: 28px !important;   /* Force small width */
+  height: 28px !important;  /* Force small height */
+  object-fit: contain;      /* Keep aspect ratio */
+  display: inline-block;
+}
+
+
+
+
